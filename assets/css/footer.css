@@ -1,0 +1,49 @@
+footer {
+  height: auto;
+  padding: 10vh 10vw 5vh 10vw;
+}
+
+#logo-footer {
+  width: 20vw;
+}
+
+.line-footer {
+  width: 20vw;
+  height: 1px;
+  border-radius: 5px;
+  background-color: var(--cream);
+}
+
+.contact-footer {
+  gap: 3vw;
+}
+
+.fa-instagram, .fa-youtube {
+  font-size: 2em;
+}
+
+.fa-tiktok, .fa-line {
+  font-size: 1.8em;
+}
+
+@media screen and (max-width: 768px) {
+  #logo-footer {
+    width: 50vw;
+  }
+
+  .line-footer {
+    width: 34vw;
+  }
+
+  .contact-footer {
+    gap: 5vw;
+  }
+  
+  .fa-instagram, .fa-youtube {
+    font-size: 1.8em;
+  }
+  
+  .fa-tiktok, .fa-line {
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "BoaConstruktor";
+    src: url("../font/BoaConstruktorBold.ttf");
+}
+
+@font-face {
+    font-family: "WorkSans";
+    src: url("../font/WorkSans-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+}
+
+.content h1 {
+    color: var(--cream, #FAF6E6);
+    text-align: center;
+    font-family: "BoaConstruktor";
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.content p{
+    color: var(--cream, #FAF6E6);
+    text-align: center;
+    font-family: "WorkSans";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

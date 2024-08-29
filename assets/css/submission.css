@@ -1,0 +1,148 @@
+.text-open {
+  font-size: 8vw;
+  background: linear-gradient(
+    99deg,
+    #a4ce39 15.72%,
+    #a4ce39 15.73%,
+    #781442 97.67%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-submission {
+  font-size: 6.3vw;
+}
+
+.text-tgl {
+  font-size: 2.5vw;
+}
+
+.line {
+  width: 55vw;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--cream);
+}
+
+.spt-toa-container {
+  position: relative;
+  height: 100px;
+  width: 90vw;
+}
+
+.img-sepatu {
+  width: 30vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-52%, -82%);
+  z-index: 10;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.checkout-btn {
+  width: 450px;
+  padding: 12px 24px;
+  color: #faf6e6;
+  background: linear-gradient(#181914, #181914) padding-box,
+    linear-gradient(to right, #781442, #a4ce39) border-box;
+  background-size: 200% 200%;
+  border-radius: 50px;
+  border: 4px solid transparent;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 6;
+  animation: gradient 5s ease infinite;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(to right, #781442, #a4ce39) border-box;
+  background-size: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .text-open {
+    font-size: 15.4vw;
+  }
+
+  .text-submission {
+    font-size: 8vw;
+    background: linear-gradient(
+      99deg,
+      #a4ce39 15.72%,
+      #a4ce39 15.73%,
+      #781442 97.67%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .spt-toa-container {
+    height: 150px;
+  }
+
+  .text-tgl {
+    font-size: 4.5vw;
+  }
+
+  .line {
+    width: 40vw;
+    height: 3px;
+  }
+
+  .img-sepatu {
+    width: 45vw;
+    transform: translate(-52%, -50%);
+  }
+
+  .checkout-btn {
+    padding: 12px 0;
+    width: 280px;
+    font-size: 14px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .spt-toa-container {
+    height: 120px;
+  }
+
+  .img-sepatu {
+    transform: translate(-52%, -50%);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .spt-toa-container {
+    height: 80px;
+  }
+
+  .img-sepatu {
+    transform: translate(-52%, -70%);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .checkout-btn {
+    padding: 10px 0;
+    width: 220px;
+    font-size: 12px;
+  }
+}

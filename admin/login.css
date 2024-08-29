@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://www.petra.ac.id/img/gedungQ.29894296.jpg);
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 768px){
+    body {
+        background-size: auto 100svh;
+        background-position: top;
+    }
+}
+
+
+.login-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+}
+
+.login-container {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0px 10px rgba(255,255,255,0.6);
+    border: 2px solid rgba(202, 202, 202,0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-container {
+    transform: translateY(10px);
+    width: 320px;
+    height: 45px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(59, 59, 59, 0.2);
+}
+
+.admin-login {
+    background-color: transparent;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 320px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: left;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.admin-login:active {
+    background-color: rgba(240, 248, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(59, 59, 59, 0);;
+}
+
+.admin-login > svg {
+    margin-left: 10px;
+    margin-right: 35px;
+}
+
+.button-container::before {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 15px;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(1px);
+    transform: translateX(-25px) translateY(-10px) rotate(-20deg);
+    opacity: 0.9;
+    transition: 0.4s;
+}
+
+.button-container:hover:before {
+    transform: translateX(345px) translateY(-10px) rotate(-20deg);
+}
+
+.text-admin {
+    color: aliceblue ;
+    font-weight: 200;
+    margin-top: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.image-bhara > img{
+    width: 200px;
+}
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 540px) {
+    .login-container {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .button-container {
+        width: 200px;
+        height: 35px;
+    }
+
+    .admin-login {
+        width: 200px;
+        height: 35px;
+        font-size: 11px;
+    }
+
+    .image-bhara > img{
+        width: 150px;
+    }
+
+    .admin-login > svg {
+        margin-left: 8px;
+        margin-right: 10px;
+        width: 20px;
+    }
+
+    .text-admin {
+        font-size: 12px;
+    }
+}

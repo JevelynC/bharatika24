@@ -1,0 +1,89 @@
+.sponsor {
+  background-color: var(--cream);
+  min-height: 0 !important;
+  padding-bottom: 5vh;
+}
+
+.logo {
+  row-gap: 5vh;
+}
+
+.logo .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-gosh {
+  width: 19vw;
+}
+
+.sponsor-implora {
+  width: 26vw;
+}
+
+.sponsor-cable {
+  width: 15.5vw;
+}
+
+.sponsor-matkens {
+  width: 19vw;
+}
+
+.sponsor-trenz {
+  width: 12vw;
+}
+
+.sponsor-sinar {
+  width: 19vw;
+}
+
+.sponsor-spectrum {
+  width: 8.5vw;
+}
+
+.sponsor-club-ocha {
+  width: 9vw;
+}
+
+.sponsor-luminor {
+  width: 14.5vw;
+}
+
+.sponsor-studos {
+  width: 16vw;
+}
+
+@media screen and (max-width: 768px) {
+  .sponsor-gosh {
+    width: 85%;
+  }
+
+  .sponsor-implora {
+    width: 115%;
+  }
+
+  .sponsor-cable {
+    width: 85%;
+  }
+
+  .sponsor-matkens {
+    width: 75%;
+  }
+
+  .sponsor-trenz {
+    width: 85%;
+  }
+
+  .sponsor-sinar {
+    width: 100%;
+  }
+
+  .sponsor-spectrum {
+    width: 70%;
+  }
+
+  .sponsor-club-ocha {
+    width: 10vw;
+  }
+}

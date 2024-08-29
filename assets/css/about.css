@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "BoaConstruktor";
+  src: url("../font/BoaConstruktorBold.ttf");
+}
+
+@font-face {
+  font-family: "Dagsen";
+  src: url("../font/Dagsen_Black.otf");
+}
+
+@font-face {
+  font-family: "DagsenOutline";
+  src: url("../font/Dagsen_Outline.otf");
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../font/WorkSans-VariableFont_wght.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #181914;
+}
+
+.description {
+  background: url("../img/about/background_about.png") no-repeat center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.text-head {
+  font-size: 5.5vw;
+  background: linear-gradient(
+    99deg,
+    #a4ce39 15.72%,
+    #a4ce39 15.73%,
+    #781442 97.67%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content,
+.isi .kontak p,
+.divisi,
+.isi .sosmed .fa-brands span {
+  font-family: "WorkSans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #faf6e6;
+}
+
+.content span,
+.isi .kontak span,
+.isi .lomba span {
+  font-weight: 700;
+}
+
+.icon {
+  background-color: #faf6e6;
+  width: 100%;
+  height: 300px;
+  padding: 0 10vw;
+}
+
+.row {
+  margin-right: 0 !important;
+}
+
+.icon .content {
+  color: #181914;
+}
+
+.isi .lomba .gambar {
+  flex-direction: row !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0;
+}
+
+.gambar .row {
+  margin: 0 auto; /* Center the row */
+}
+
+.card {
+  margin-bottom: 20px; /* Add some space between cards */
+}
+
+.isi .lomba .gambar img {
+  width: 215px;
+  height: 411px;
+}
+
+.carousel {
+  width: 40vw;
+}
+
+.isi .kontak h2 {
+  color: var(--cream, #faf6e6);
+  font-family: "BoaConstruktor";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.isi .sosmed .fa-brands {
+  color: var(--cream, #faf6e6);
+  text-align: center;
+  font-family: "Font Awesome 6 Brands";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.isi .credit .title {
+  flex-direction: row !important;
+}
+
+.isi .credit .text-head,
+.isi .dokumentasi .text-head {
+  font-family: "Dagsen";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.isi .credit .divisi span {
+  color: var(--cream, #faf6e6);
+  text-align: center;
+  font-family: "BoaConstruktor";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.isi .credit .divisi {
+  color: var(--cream, #faf6e6);
+  font-family: "WorkSans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(
+    360deg,
+    #781442 25.41%,
+    rgba(120, 20, 66, 0) 100%
+  );
+}
+
+.line-events {
+  width: 10vw;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--cream);
+}
+
+.desktop2 {
+  display: contents;
+}
+
+.mobile2 {
+  display: none;
+}
+
+.mobile-about {
+  display: none;
+}
+
+.desktop-about {
+  display: contents;
+}
+
+.carousel-mobile{
+  display: none;
+}
+
+.carousel-desktop{
+  display: contents;
+}
+
+@media (max-width: 700px) {
+  .desktop2 {
+    display: none !important;
+  }
+
+  .mobile2 {
+    display: contents;
+  }
+
+  .carousel {
+    width: 80vw;
+  }
+
+  .carousel-mobile{
+    display: contents;
+  }
+  
+  .carousel-desktop{
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .icon {
+    height: 430px;
+  }
+
+  .isi .dokumentasi .text-head {
+    font-size: 40px;
+  }
+
+  .mobile-about {
+    display: contents;
+  }
+
+  .desktop-about {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .content,
+  .isi .kontak p,
+  .divisi,
+  .isi .sosmed .fa-brands span {
+    font-size: 10px;
+  }
+
+  .isi .kontak h2 {
+    font-size: 30px;
+  }
+
+  .isi .credit .text-head,
+  .isi .dokumentasi .text-head {
+    font-size: 25px;
+  }
+
+  .isi .credit .divisi span {
+    font-size: 9px;
+  }
+
+  .isi .credit .divisi {
+    font-size: 8px;
+  }
+}
+
+.description .content {
+  margin: 0 !important;
+}

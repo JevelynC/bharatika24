@@ -1,0 +1,256 @@
+.isi {
+  margin-top: 60px !important;
+}
+
+/* HEAD */
+.headline {
+  height: calc(100svh - 60px);
+  margin: 0;
+}
+
+.background {
+  position: relative;
+}
+
+.background img {
+  height: 70vh;
+  opacity: 0.3;
+  filter: grayscale(50%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 10px 0px #181914;
+}
+
+.background .left_img {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  transform: translate(-50%, 15%);
+  z-index: -1;
+}
+
+.background .right_img {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  transform: translate(20%, 15%);
+  z-index: -2;
+}
+
+.front {
+  z-index: 1;
+  width: 70vw;
+  margin: 0 15vw;
+}
+
+.line-events {
+  width: 20vw;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--cream);
+}
+
+.desktop2 {
+  display: contents;
+}
+
+.mobile2 {
+  display: none;
+}
+
+.art_exhibition {
+  border-radius: 70px;
+  background: var(--magenta);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 10px 0px #181914;
+  padding: 1vh 1.4vw;
+  font-size: 2.2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headline .title {
+  color: var(--green);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 10px #181914;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.headline .title .row_1 {
+  font-size: 7.5vw;
+}
+
+.headline .title .row_2 {
+  font-size: 10.5vw;
+}
+
+.headline .title {
+  color: var(--green);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 10px #181914;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.line {
+  width: 31vw;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--cream);
+}
+
+.text-tgl {
+  font-size: 2vw;
+}
+
+/* SUBMISSION */
+.box-container {
+  width: 70vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 5vw;
+}
+
+.text-details-header {
+  font-size: 4vw;
+  margin: 20px 0 20px 0;
+}
+.text-details-content {
+  font-size: 1.6vw;
+}
+
+.logo_tema {
+  width: 340px;
+}
+
+.btn-snk {
+  color: #781442;
+  font-weight: bolder;
+  border-radius: 100px;
+  background: var(--cream, #faf6e6);
+  box-shadow: 0px 0px 5px 0px rgba(120, 20, 66, 0.3);
+  padding: 10px 25px;
+  margin-right: 20px;
+}
+
+.btn-snk:hover {
+  background: linear-gradient(to right, #781442, #a4ce39) border-box;
+  background-size: 100%;
+  color: var(--cream);
+}
+
+.btn-submit {
+  color: var(--cream);
+  font-weight: bolder;
+  border-radius: 100px;
+  background: #000;
+  background: linear-gradient(to right, #781442, #a4ce39) border-box;
+  background-size: 100%;
+  box-shadow: 0px 0px 5px 0px rgba(120, 20, 66, 0.3);
+  padding: 10px 35px;
+}
+
+.btn-submit:hover {
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--cream);
+}
+
+@media screen and (max-width: 1100px) {
+  .headline {
+    height: auto;
+    margin-top: 15vh;
+  }
+
+  .headline .title .row_1 {
+    margin: 0 !important;
+  }
+
+  .box-container {
+    flex-direction: column;
+    margin: 10vh auto;
+  }
+
+  .logo_tema {
+    width: 340px;
+  }
+
+  .right {
+    margin-top: 30px;
+  }
+
+  .background img {
+    height: 40vh;
+  }
+
+  .line-events {
+    width: 18vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .background img {
+    height: 30vh;
+  }
+
+  .front {
+    width: 80vw;
+  }
+  .isi {
+    margin-top: 55px;
+  }
+
+  .desktop2 {
+    display: none !important;
+  }
+
+  .mobile2 {
+    display: contents;
+  }
+
+  .line {
+    width: 22.5vw;
+    height: 3px;
+  }
+
+  .headline .title .row_1 {
+    font-size: 8.5vw;
+  }
+
+  .headline .title .row_2 {
+    font-size: 12vw;
+  }
+
+  .logo_tema {
+    width: 260px;
+  }
+
+  .art_exhibition {
+    font-size: 3vw;
+  }
+
+  .text-details-header {
+    font-size: 10vw;
+  }
+
+  /* BUTTON */
+
+  .btn-snk {
+    padding: 7px 15px;
+  }
+
+  .btn-submit {
+    padding: 7px 15px;
+    margin-top: 2vh;
+  }
+
+  .text-tgl {
+    font-size: 3vw;
+    text-align: center;
+  }
+}

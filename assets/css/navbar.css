@@ -1,0 +1,213 @@
+.navbar {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  background: linear-gradient(90deg, var(--green) 0%, var(--black) 100%);
+  --bs-navbar-toggler-focus-width: 0 !important;
+  position: fixed;
+  height: 60px !important;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+
+.mainInner {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.mainInner div {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+
+#sidebarMenu {
+  height: 100%;
+  position: fixed;
+  right: 0;
+  width: 310px;
+  margin-top: 60px;
+  transform: translateX(310px);
+  transition: transform 310ms ease-in-out;
+  background: linear-gradient(90deg, var(--green) 0%, var(--black) 100%);
+  --bs-navbar-toggler-focus-width: 0 !important;
+  z-index: 999;
+}
+
+.sidebarMenuInner {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarMenuInner a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebarMenuInner li {
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: floralwhite;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.sidebarMenuInner li h4 {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+.logo_container {
+  position: absolute;
+  z-index: 99;
+  left: 25px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo_capital {
+  width: 40px;
+  height: 40px;
+}
+
+.title_nav {
+  position: absolute;
+  z-index: 99;
+  top: 22px;
+  left: 75px;
+  color: white;
+}
+
+.money-container {
+  position: absolute;
+  z-index: 99;
+  top: 15px;
+  right: 95px;
+  background-color: floralwhite;
+  border-radius: 50px;
+  width: 200px;
+  text-align: center;
+  gap: 10px;
+}
+
+.money-sidebar {
+  display: none !important;
+}
+
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 23px;
+  right: 35px;
+  height: 22px;
+  width: 22px;
+}
+
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+@media screen and (max-width: 768px) {
+  .title_nav {
+    top: 24px;
+  }
+
+  .money-container {
+    display: none !important;
+  }
+
+  .money-sidebar {
+    display: flex !important;
+  }
+
+  #sidebarMenu {
+    height: 100%;
+    width: 100vw;
+    transform: translateX(100vw);
+    transition: transform 100vw ease-in-out;
+  }
+
+  .sidebarMenuInner {
+    padding: 30px !important;
+  }
+}
