@@ -5,73 +5,73 @@
 require_once '../vendor/autoload.php';
 require "../connect.php";
 
-$client = new Google_Client();
-$client->setClientId('541343205009-6mirmj9bql40qcvnai5ni1g0lkqtou4c.apps.googleusercontent.com'); 
-$client->setClientSecret('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');
-$client->setRedirectUri('https://bharatikafest.petra.ac.id/2024/main/admin/login.php');
+// $client = new Google_Client();
+// $client->setClientId('541343205009-6mirmj9bql40qcvnai5ni1g0lkqtou4c.apps.googleusercontent.com'); 
+// $client->setClientSecret('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');
+// $client->setRedirectUri('https://bharatikafest.petra.ac.id/2024/main/admin/login.php');
 // $client->setRedirectUri('http://localhost/bhara/bharatika2024/admin/login.php');
 
-$client->addScope('email');
-$client->addScope('profile');
+// $client->addScope('email');
+// $client->addScope('profile');
 
-if (isset($_GET['code'])) {
-    $msg = "";
+// if (isset($_GET['code'])) {
+//     $msg = "";
 
-    \Firebase\JWT\JWT::$leeway = 60;
-    do{
-        $attempt = 0;
-        try{
-            $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-            if(!isset($token['error'])){
+//     \Firebase\JWT\JWT::$leeway = 60;
+//     do{
+//         $attempt = 0;
+//         try{
+//             $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+//             if(!isset($token['error'])){
                 
-                $client->setAccessToken($token['access_token']);
-                $service = new Google_Service_Oauth2($client);
-                $profile = $service->userinfo->get();
+//                 $client->setAccessToken($token['access_token']);
+//                 $service = new Google_Service_Oauth2($client);
+//                 $profile = $service->userinfo->get();
 
-                if($profile){
-                    if(isset($profile['hd']) && str_ends_with($profile['hd'], 'john.petra.ac.id')){
-                        $gmail = $profile['email'];
-                        $username = $profile['name'];
-                        $id = $profile['id'];
-                        $nrp = strtolower(substr($gmail, 0, 9));
+//                 if($profile){
+//                     if(isset($profile['hd']) && str_ends_with($profile['hd'], 'john.petra.ac.id')){
+//                         $gmail = $profile['email'];
+//                         $username = $profile['name'];
+//                         $id = $profile['id'];
+//                         $nrp = strtolower(substr($gmail, 0, 9));
                         
-                        // check is admin
-                        $sql = "SELECT a.*, d.name as divisi FROM admin a
-                        JOIN divisi d on a.id_divisi = d.id
-                        where nrp = ?;";
-                        $stmt = $conn->prepare($sql);
-                        $stmt->execute([$nrp]);
-                        $data = $stmt->fetch();
-                        if($stmt->rowCount() > 0 && $data['role'] === 'admin' ){
-                            $_SESSION['access_token'] = $token['access_token'];
-                            $_SESSION['gmail'] = $gmail;
-                            $_SESSION['username'] = $data['nama'];
-                            $_SESSION['division'] = $data['divisi']; 
-                            $_SESSION['nrp'] = $nrp;
+//                         // check is admin
+//                         $sql = "SELECT a.*, d.name as divisi FROM admin a
+//                         JOIN divisi d on a.id_divisi = d.id
+//                         where nrp = ?;";
+//                         $stmt = $conn->prepare($sql);
+//                         $stmt->execute([$nrp]);
+//                         $data = $stmt->fetch();
+//                         if($stmt->rowCount() > 0 && $data['role'] === 'admin' ){
+//                             $_SESSION['access_token'] = $token['access_token'];
+//                             $_SESSION['gmail'] = $gmail;
+//                             $_SESSION['username'] = $data['nama'];
+//                             $_SESSION['division'] = $data['divisi']; 
+//                             $_SESSION['nrp'] = $nrp;
 
-                            header('Location: ./index.php');
-                        }else{
-                            //is not admin
-                            $msg = "You are not admin";
-                        }
-                    }else{
-                        //silahkan pakai email petra
-                        $msg = "Silahkan pakai email petra";
-                    }
-                }else{
-                    //error get data from google
-                    $msg = "Error get data from google";
-                }          
-            }
-            $retry = false;
-        }catch(\Firebase\JWT\BeforeValidException $e){
-            $retry = $attempt < 2;
-            $attempt++; 
-        }
-    }while($retry);
-}
+//                             header('Location: ./index.php');
+//                         }else{
+//                             //is not admin
+//                             $msg = "You are not admin";
+//                         }
+//                     }else{
+//                         //silahkan pakai email petra
+//                         $msg = "Silahkan pakai email petra";
+//                     }
+//                 }else{
+//                     //error get data from google
+//                     $msg = "Error get data from google";
+//                 }          
+//             }
+//             $retry = false;
+//         }catch(\Firebase\JWT\BeforeValidException $e){
+//             $retry = $attempt < 2;
+//             $attempt++; 
+//         }
+//     }while($retry);
+// }
 
-?>
+// ?>
 
 
 <!DOCTYPE html>
