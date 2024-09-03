@@ -6,8 +6,8 @@ require_once '../vendor/autoload.php';
 require "../connect.php";
 
 // $client = new Google_Client();
-// $client->setClientId('541343205009-6mirmj9bql40qcvnai5ni1g0lkqtou4c.apps.googleusercontent.com'); 
-// $client->setClientSecret('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');
+// $client->setClientId('add key'); 
+// $client->setClientSecret('GOCSPX-add key');
 // $client->setRedirectUri('https://bharatikafest.petra.ac.id/2024/main/admin/login.php');
 // $client->setRedirectUri('http://localhost/bhara/bharatika2024/admin/login.php');
 
